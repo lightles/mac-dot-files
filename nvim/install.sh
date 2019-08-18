@@ -1,12 +1,12 @@
-#!/bin/bash
-virtualenv -p python3 $HOME/.config/nvim/pynvim;
-source $HOME/.config/nvim/pynvim/bin/activate;
-pip install pyls pynvim;
+#!/bin/sh
+virtualenv -p python3 $HOME/.config/nvim/pynvim &&
+source $HOME/.config/nvim/pynvim/bin/activate &&
+pip install pyls pynvim &&
 
-mkdir $HOME/.config/nvim/swapfiles;
-mkdir $HOME/.config/nvim/bundle;
+mkdir $HOME/.config/nvim/swapfiles &&
+mkdir $HOME/.config/nvim/bundle &&
 
 curl -fLo ~/.config/nvim/autoload/plug.vim \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim;
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
 
-nvim +'silent! PlugUpdate' +qall;
+nvim --noplugin +'PlugUpdate' +qall;
