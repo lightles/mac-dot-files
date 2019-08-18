@@ -1,0 +1,4 @@
+nvim/pynvim
+nvim/autoload/plug.vim
+nvim/bundle
+nvim/swapfiles

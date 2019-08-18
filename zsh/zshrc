@@ -1,0 +1,85 @@
+#Set PATH
+export PATH="$PATH:/usr/local/sbin:$HOME/bin"
+export PATH=/usr/local/share/python:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.config/zsh/oh-my-zsh"
+
+ZSH_THEME="custom-agnoster"
+
+# case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# hyphen-insensitive completion.
+HYPHEN_INSENSITIVE="true"
+
+# disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# how often to auto-update (in days).
+#export UPDATE_ZSH_DAYS=13
+#export UPDATE_ZSH_DAYS=0
+
+# display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+ZSH_CUSTOM="$HOME/.config/zsh/config"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+  osx
+  zsh-autosuggestions
+  python
+  pip
+  copyfile
+  wd
+  kubectl
+  docker
+)
+
+
+source $ZSH/oh-my-zsh.sh
+compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+if [ -z "$ZSH_COMPDUMP" ]; then
+    ZSH_COMPDUMP="$HOME/.cache/zsh/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
+fi
+HISTFILE="$HOME/.cache/zsh/zsh_history"
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
+
+bindkey -v
+bindkey "^?" backward-delete-char
+export KEYTIMEOUT=1
+# source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# reverse-menu-complete
+bindkey '^[[Z' reverse-menu-complete
+# kube, az 
+export KUBECONFIG=~/.kube/elanco-config
+source "/usr/local/etc/bash_completion.d/az"
