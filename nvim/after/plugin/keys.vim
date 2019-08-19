@@ -55,9 +55,21 @@ let g:which_key_leader_map.t = {
 
 let g:which_key_leader_map.T = {
       \ 'name' : '+Toggle'   ,
-      \ 'w' : [':set wrap!'  , 'line-wrap']     ,
-      \ 'i' : [':set paste!' , 'paste-toggle']  ,
-      \ 'l' : [':call myCore#ToggleLineNumbers()'  , 'line-numbers'] ,
+      \ 'w' : [':set wrap!'      , 'line-wrap']   ,
+      \ 'i' : [':set paste!'     , 'paste-mode']  ,
+      \ 'l' : [':call myCore#ToggleLineNumbers()' , 'line-numbers'] ,
+      \ }
+
+let g:which_key_leader_map.g = {
+      \ 'name' : '+Git'   ,
+      \ 'n' : ['<Plug>GitGutterNextHunk' , 'next-hunk'] ,
+      \ 'p' : ['<Plug>GitGutterPrevHunk' , 'prev-hunk'] ,
+      \ }
+let g:which_key_leader_map.g.T = {
+      \ 'name' : '+GitGutter'   ,
+      \ 'g' : ['GitGutterToggle' , 'git-gutter'] ,
+      \ 'l' : ['GitGutterLineHighlightsToggle'   , 'git-hlines']  ,
+      \ 'n' : ['GitGutterLineNrHighlightsToggle' , 'git-hline-num']  ,
       \ }
 
 let g:which_key_leader_map.f = {
@@ -79,13 +91,26 @@ let g:which_key_leader_map.s = {
 
 let g:which_key_leader_map.q = {
       \ 'name' : '+System' ,
+      \ 'c' : ['checkhealth' , 'neovim-health'] ,
       \ 'u' : [':call myCore#UpdatePlugins()' , 'update-plugins']  ,
       \ }
 
-map <leader>c <Plug>NERDCommenterToggle
+let g:which_key_leader_map.h = {
+      \ 'name' : '+Help' ,
+      \ 'c' : ['commands' , 'command-list'] ,
+      \ 'h' : [':Help' , 'help-search'] ,
+      \ }
+let g:which_key_leader_map.h.k = {
+      \ 'name' : '+Key-maps' ,
+      \ 'a' : ['map' , 'map'] ,
+      \ 'i' : ['imap' , 'insert-keys'] ,
+      \ 'v' : ['vmap' , 'visual-keys'] ,
+      \ 'n' : ['nmap' , 'normal-keys'] ,
+      \ }
+
+nmap <leader>c <Plug>NERDCommenterToggle
 vmap <leader>c <Plug>NERDCommenterToggle
 let g:which_key_leader_map.c = '(un)comment-line'
 
-map <silent> <leader>S bveS
+nmap <silent> <leader>S bveS
 let g:which_key_leader_map.S = 'surround-word'
-

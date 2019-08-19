@@ -42,4 +42,13 @@ Plug 'elzr/vim-json'
 " ansible
 Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
 
+" pandoc & markdown
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'iamcco/markdown-preview.nvim' , { 'do': { -> mkdp#util#install() } }
+
+" DockerFile
+Plug 'ekalinin/Dockerfile.vim'
+
+
 call plug#end()
