@@ -1,6 +1,8 @@
 call plug#begin('~/.config/nvim/bundle')
 
-let g:python3_host_prog=expand('~/.config/nvim/pynvim/bin/python3')
+" Variables
+let g:python3_host_prog=expand('~/.config/nvim/bin/pynvim/bin/python3')
+let g:default_preview_browser='Firefox'
 
 " Better file tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -50,5 +52,8 @@ Plug 'iamcco/markdown-preview.nvim' , { 'do': { -> mkdp#util#install() } }
 " DockerFile
 Plug 'ekalinin/Dockerfile.vim'
 
+" plantuml
+" TODO myCore and ftplugin keys
+Plug 'aklt/plantuml-syntax'
 
 call plug#end()

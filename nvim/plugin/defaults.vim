@@ -27,7 +27,7 @@ set smartcase
 set showmatch
 set laststatus=2
 set t_Co=256
-set directory=$HOME/.vim/swapfiles//
+set directory=$HOME/.config/nvim/swapfiles//
 set wildmenu
 set breakindent
 set timeout
