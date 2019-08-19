@@ -11,7 +11,11 @@ python3 virtualenv command
 
 # Installation
 
-Run the following commands to setup the tool.
+```
+git clone https://github.com/lightles/mac-dot-files; 
+git submodule update --init --recursive
+```
+Run the following commands to setup a particular tool.
 
 ## ZSH Setup
 ``` 
