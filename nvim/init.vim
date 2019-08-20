@@ -53,7 +53,6 @@ Plug 'iamcco/markdown-preview.nvim' , { 'do': { -> mkdp#util#install() } }
 Plug 'ekalinin/Dockerfile.vim'
 
 " plantuml
-" TODO myCore and ftplugin keys
 Plug 'aklt/plantuml-syntax'
 
 call plug#end()

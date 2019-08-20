@@ -2,10 +2,10 @@ let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
 " non leader keybinds
 
-nnoremap <silent> <C-h> <C-w>h
-nnoremap <silent> <C-j> <C-w>j
-nnoremap <silent> <C-k> <C-w>k
-nnoremap <silent> <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 nnoremap <silent> <C-_> :let@/=""<CR>
 
