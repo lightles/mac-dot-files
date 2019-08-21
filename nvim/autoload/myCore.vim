@@ -18,9 +18,10 @@ function! myCore#UpdateCOCPlugins()
         exec 'CocInstall ' . plugin
     endfor
 endfunction	
+
 function! myCore#UpdatePlugins()
     source ~/.config/nvim/init.vim
-    "exec 'PlugUpgrade'
+    exec 'PlugUpgrade'
     exec 'PlugInstall'
     call myCore#UpdateCOCPlugins()
 endfunction	

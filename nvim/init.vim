@@ -1,9 +1,10 @@
-call plug#begin('~/.config/nvim/bundle')
-
 " Variables
-let g:python3_host_prog=expand('~/.config/nvim/bin/pynvim/bin/python3')
+let g:python3_host_prog=expand('~/.config/nvim/bin/pynvim3/bin/python')
+let g:python_host_prog=expand('~/.config/nvim/bin/pynvim2/bin/python')
 let g:default_preview_browser='Firefox'
-let g:CocPluginList = ['coc-ultisnips', 'coc-python', 'coc-yaml']
+let g:CocPluginList = ['coc-ultisnips', 'coc-yaml']
+
+call plug#begin('~/.config/nvim/bundle')
 
 " Better file tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }

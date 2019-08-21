@@ -2,17 +2,23 @@
 
 echo "\nBEGINNING NEOVIM SETUP \n\n"
 NVIM_DIR=$HOME/.config/nvim
-PYNVIM=$HOME/.config/nvim/bin/pynvim
 
 echo "\nCOMPLETING DIRECTORY STRUCTURE\n\n"
-mkdir $NVIM_DIR/swapfiles &&
-mkdir $NVIM_DIR/bundle &&
-mkdir $NVIM_DIR/bin &&
+mkdir $NVIM_DIR/swapfiles;
+mkdir $NVIM_DIR/bundle;
+mkdir $NVIM_DIR/bin;
+
+
 
 echo "\nSETTING UP PYTHON3 ENVIRONMENT\n\n"
-virtualenv -p python3 $PYNVIM &&
-source $PYNVIM/bin/activate &&
+virtualenv -p python3 $NVIM_DIR/bin/pynvim3 &&
+source $NVIM_DIR/bin/pynvim3/bin/activate &&
 pip install pyls pynvim &&
+deactivate;
+virtualenv -p python2 $NVIM_DIR/bin/pynvim2 &&
+source $NVIM_DIR/bin/pynvim2/bin/activate &&
+pip install pyls pynvim &&
+deactivate;
 
 
 echo "\nINSTALLING VIM-PLUG LATEST\n\n"
