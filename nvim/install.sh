@@ -24,6 +24,8 @@ curl -fLo $NVIM_DIR/bin/plantuml.jar \
     https://sourceforge.net/projects/plantuml/files/plantuml.jar/download &&
 
 echo "\nINSTALLING NEOVIM PLUGINS\n\n"
-nvim --noplugin +'PlugUpdate' +qall;
+nvim --noplugin +'call myCore#UpdatePlugins()' +qall &&
+
+curl -sL install-node.now.sh/lts | bash &&
 
 echo "\nINSTALLATION COMPLETE\n\n"

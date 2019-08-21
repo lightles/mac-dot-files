@@ -31,7 +31,13 @@ set directory=$HOME/.config/nvim/swapfiles//
 set wildmenu
 set breakindent
 set timeout
-set timeoutlen=250
+set timeoutlen=500
 autocmd FileType markdown setlocal spell
 set isfname-=-
 set foldmethod=syntax
+set nobackup
+set nowritebackup
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes

@@ -55,8 +55,9 @@ let g:which_key_leader_map.t = {
 
 let g:which_key_leader_map.T = {
       \ 'name' : '+Toggle'   ,
-      \ 'w' : [':set wrap!'      , 'line-wrap']   ,
-      \ 'i' : [':set paste!'     , 'paste-mode']  ,
+      \ 'w' : [':set wrap!'            , 'line-wrap']   ,
+      \ 'i' : [':set paste!'           , 'paste-mode']  ,
+      \ 'I' : ['IndentLinesToggle'     , 'indent-lines']  ,
       \ 'l' : [':call myCore#ToggleLineNumbers()' , 'line-numbers'] ,
       \ }
 
@@ -114,3 +115,7 @@ let g:which_key_leader_map.c = '(un)comment-line'
 
 nmap <silent> <leader>S bveS
 let g:which_key_leader_map.S = 'surround-word'
+" coc
+nmap <leader>rn <Plug>(coc-rename)
+"let g:which_key_leader_map.r.n = "rename-variable"
+

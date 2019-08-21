@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/bundle')
 " Variables
 let g:python3_host_prog=expand('~/.config/nvim/bin/pynvim/bin/python3')
 let g:default_preview_browser='Firefox'
+let g:CocPluginList = ['coc-ultisnips', 'coc-python', 'coc-yaml']
 
 " Better file tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -30,19 +31,17 @@ Plug 'honza/vim-snippets'
 " Theme related
 Plug 'liuchengxu/space-vim-theme'
 Plug 'itchyny/lightline.vim'
+" indent lines
+Plug 'Yggdroot/indentLine'
 
 " completion
-Plug 'ervandew/supertab'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-" TabNine
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+" VimL coc
+Plug 'Shougo/neco-vim'
+Plug 'neoclide/coc-neco'
 
 " json 
 Plug 'elzr/vim-json'
-
-" ansible
-Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
 
 " pandoc & markdown
 Plug 'vim-pandoc/vim-pandoc'
