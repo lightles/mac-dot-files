@@ -36,10 +36,14 @@ Plug 'itchyny/lightline.vim'
 Plug 'Yggdroot/indentLine'
 
 " completion
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-" VimL coc
-Plug 'Shougo/neco-vim'
-Plug 'neoclide/coc-neco'
+Plug 'ervandew/supertab'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" TabNine
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+
+" Python
+Plug 'deoplete-plugins/deoplete-jedi'
 
 " json 
 Plug 'elzr/vim-json'

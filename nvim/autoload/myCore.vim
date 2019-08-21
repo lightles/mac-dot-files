@@ -13,20 +13,11 @@ function! myCore#SshEdit()
   "call setline('.', curline . ' ' . name)
 endfunction
 
-function! myCore#UpdateCOCPlugins()
-    for plugin in g:CocPluginList
-        exec 'CocInstall ' . plugin
-    endfor
-endfunction	
-
 function! myCore#UpdatePlugins()
     source ~/.config/nvim/init.vim
     exec 'PlugUpgrade'
     exec 'PlugInstall'
-    call myCore#UpdateCOCPlugins()
 endfunction	
-
-
 
 function! myCore#ToggleLineNumbers()
     :set number! | set norelativenumber!

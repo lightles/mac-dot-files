@@ -13,11 +13,11 @@ mkdir $NVIM_DIR/bin;
 echo "\nSETTING UP PYTHON3 ENVIRONMENT\n\n"
 virtualenv -p python3 $NVIM_DIR/bin/pynvim3 &&
 source $NVIM_DIR/bin/pynvim3/bin/activate &&
-pip install pyls pynvim &&
+pip install pyls pynvim jedi &&
 deactivate;
 virtualenv -p python2 $NVIM_DIR/bin/pynvim2 &&
 source $NVIM_DIR/bin/pynvim2/bin/activate &&
-pip install pyls pynvim &&
+pip install pyls pynvim jedi &&
 deactivate;
 
 
@@ -33,7 +33,6 @@ echo "\nINSTALLING NODE\n\n"
 curl -sL install-node.now.sh/lts | bash &&
 
 echo "\nINSTALLING NEOVIM PLUGINS\n\n"
-nvim --noplugin +'PlugInstall'; 
-nvim +'call myCore#UpdateCOCPlugins()'; 
+nvim --noplugin +'PlugUpdate'; 
 
 echo "\nINSTALLATION COMPLETE\n\n"
