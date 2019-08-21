@@ -23,9 +23,11 @@ echo "\nINSTALLING PLANTUML LATEST\n\n"
 curl -fLo $NVIM_DIR/bin/plantuml.jar \
     https://sourceforge.net/projects/plantuml/files/plantuml.jar/download &&
 
-echo "\nINSTALLING NEOVIM PLUGINS\n\n"
-nvim --noplugin +'call myCore#UpdatePlugins()' +qall &&
-
+echo "\nINSTALLING NODE\n\n"
 curl -sL install-node.now.sh/lts | bash &&
+
+echo "\nINSTALLING NEOVIM PLUGINS\n\n"
+nvim --noplugin +'PlugInstall'; 
+nvim +'call myCore#UpdateCOCPlugins()'; 
 
 echo "\nINSTALLATION COMPLETE\n\n"

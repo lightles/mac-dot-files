@@ -46,7 +46,7 @@ Plug 'elzr/vim-json'
 " pandoc & markdown
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'iamcco/markdown-preview.nvim' , { 'do': { -> mkdp#util#install() } }
+Plug 'iamcco/markdown-preview.nvim' , { 'do': { -> mkdp#util#install()}}
 
 " DockerFile
 Plug 'ekalinin/Dockerfile.vim'
