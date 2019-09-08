@@ -48,6 +48,12 @@ Plug 'deoplete-plugins/deoplete-jedi'
 " json 
 Plug 'elzr/vim-json'
 
+" ansible
+Plug 'pearofducks/ansible-vim'
+
+" Powershell
+Plug 'PProvost/vim-ps1'
+
 " pandoc & markdown
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
