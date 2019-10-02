@@ -21,6 +21,7 @@ endfunction
 
 function! myCore#ToggleLineNumbers()
     :set number! | set norelativenumber!
+    IndentLinesToggle
 endfunction
 
 function! myCore#WriteAndDeleteTrailingWhitespace()
@@ -32,3 +33,11 @@ function! myCore#RunAndPreviewPlantUML()
 	execute "silent !open -a ". g:default_preview_browser . " " . expand('%:p:r') . ".svg"
 endfunction
 
+function! myCore#AddATODOAboveLine()
+    call append(line(".")-1, "TODO ")
+    execute "normal k"
+    execute "normal \<Plug>NERDCommenterToggle"
+    execute "normal =="
+    execute "normal \<End>bi"." "
+    startinsert!
+endfunction

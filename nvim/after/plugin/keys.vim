@@ -109,9 +109,18 @@ let g:which_key_leader_map.h.k = {
       \ 'n' : ['nmap' , 'normal-keys'] ,
       \ }
 
+let g:which_key_leader_map.C = {
+      \ 'name' : '+NERDCommenter' ,
+      \ 'c' : ['<Plug>NERDCommenterToggle' , 'comment'] ,
+      \ 'y' : ['<Plug>NERDCommenterYank' , 'comment-yank'] ,
+      \ 't' : [':call  myCore#AddATODOAboveLine()' , 'place-TODO'] ,
+      \ }
+
+let g:which_key_leader_map.c = 'comment'
 nmap <leader>c <Plug>NERDCommenterToggle
 vmap <leader>c <Plug>NERDCommenterToggle
-let g:which_key_leader_map.c = '(un)comment-line'
+vmap <leader>Cc <Plug>NERDCommenterToggle
+vmap <leader>Cy <Plug>NERDCommenterYank
 
 nmap <silent> <leader>S bveS
 let g:which_key_leader_map.S = 'surround-word'
