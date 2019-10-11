@@ -62,6 +62,10 @@ Plug 'iamcco/markdown-preview.nvim' , { 'do': { -> mkdp#util#install()}}
 " DockerFile
 Plug 'ekalinin/Dockerfile.vim'
 
+" Go
+Plug 'fatih/vim-go'
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+
 " plantuml
 Plug 'aklt/plantuml-syntax'
 

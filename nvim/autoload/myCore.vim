@@ -15,8 +15,8 @@ endfunction
 
 function! myCore#UpdatePlugins()
     source ~/.config/nvim/init.vim
-    exec 'PlugUpgrade'
-    exec 'PlugInstall'
+    execute 'PlugUpgrade'
+    execute 'PlugUpdate'
 endfunction	
 
 function! myCore#ToggleLineNumbers()

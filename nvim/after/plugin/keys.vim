@@ -43,6 +43,8 @@ let g:which_key_leader_map.w = {
       \ 'k' : ['<C-w>k'    , 'window-up']     ,
       \ 'l' : ['<C-w>l'    , 'window-right']  ,
       \ 'w' : ['<C-w>w'    , 'window-other']  ,
+      \ 'o' : ['<C-w>o'    , 'close-all-others']  ,
+      \ '=' : ['<C-w>='    , 'equalize-size']  ,
       \ }
 
 let g:which_key_leader_map.t = {
