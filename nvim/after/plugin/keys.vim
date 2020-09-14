@@ -118,6 +118,9 @@ let g:which_key_leader_map.C = {
       \ 't' : [':call  myCore#AddATODOAboveLine()' , 'place-TODO'] ,
       \ }
 
+let g:which_key_leader_map.1 =  'Goyo'
+nmap <leader>1 :Goyo<CR>
+
 let g:which_key_leader_map.c = 'comment'
 nmap <leader>c <Plug>NERDCommenterToggle
 vmap <leader>c <Plug>NERDCommenterToggle

@@ -54,6 +54,7 @@ plugins=(
   wd
   kubectl
   docker
+  emoji-clock
 )
 
 
@@ -83,3 +84,10 @@ bindkey '^[[Z' reverse-menu-complete
 # kube, az 
 export KUBECONFIG=~/.kube/elanco-config
 source "/usr/local/etc/bash_completion.d/az"
+
+# go path
+export GOPATH=$HOME/dev.d/go
+export GOBIN=$GOPATH/bin
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin

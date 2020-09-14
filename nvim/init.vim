@@ -2,7 +2,6 @@
 let g:python3_host_prog=expand('~/.config/nvim/bin/pynvim3/bin/python')
 let g:python_host_prog=expand('~/.config/nvim/bin/pynvim2/bin/python')
 let g:default_preview_browser='Firefox'
-let g:CocPluginList = ['coc-ultisnips', 'coc-yaml']
 
 call plug#begin('~/.config/nvim/bundle')
 
@@ -32,6 +31,7 @@ Plug 'honza/vim-snippets'
 " Theme related
 Plug 'liuchengxu/space-vim-theme'
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/goyo.vim'
 " indent lines
 Plug 'Yggdroot/indentLine'
 
